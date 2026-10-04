@@ -1,0 +1,185 @@
+{
+  "sample_ratio_check": {
+    "counts": {
+      "Mens E-Mail": 21307,
+      "No E-Mail": 21306,
+      "Womens E-Mail": 21387
+    },
+    "chi2": 0.20253125000000002,
+    "p_value": 0.9036929575604196
+  },
+  "max_abs_smd": 0.008630731202832915,
+  "kpis": {
+    "Mens E-Mail": {
+      "customers": 21307,
+      "visit_rate": 0.1828,
+      "conversion_rate": 0.0125,
+      "revenue_per_customer": 1.4226,
+      "total_revenue": 30311.69,
+      "avg_order_value": 113.5269
+    },
+    "No E-Mail": {
+      "customers": 21306,
+      "visit_rate": 0.1062,
+      "conversion_rate": 0.0057,
+      "revenue_per_customer": 0.6528,
+      "total_revenue": 13908.33,
+      "avg_order_value": 114.0027
+    },
+    "Womens E-Mail": {
+      "customers": 21387,
+      "visit_rate": 0.1514,
+      "conversion_rate": 0.0088,
+      "revenue_per_customer": 1.0772,
+      "total_revenue": 23038.11,
+      "avg_order_value": 121.8948
+    }
+  },
+  "readout": [
+    {
+      "treatment": "Mens E-Mail",
+      "metric": "visit",
+      "control_mean": 0.10617,
+      "treatment_mean": 0.18276,
+      "absolute_lift": 0.07659,
+      "relative_lift": 0.7214,
+      "ci_low": 0.06995,
+      "ci_high": 0.08323,
+      "p_value": 0.0,
+      "test": "two-proportion z-test",
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "treatment": "Mens E-Mail",
+      "metric": "conversion",
+      "control_mean": 0.00573,
+      "treatment_mean": 0.01253,
+      "absolute_lift": 0.00681,
+      "relative_lift": 1.18842,
+      "ci_low": 0.005,
+      "ci_high": 0.00861,
+      "p_value": 0.0,
+      "test": "two-proportion z-test",
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "treatment": "Mens E-Mail",
+      "metric": "spend",
+      "control_mean": 0.65279,
+      "treatment_mean": 1.42262,
+      "absolute_lift": 0.76983,
+      "relative_lift": 1.17929,
+      "ci_low": 0.48402,
+      "ci_high": 1.05173,
+      "p_value": 0.0,
+      "test": "Welch t-test, bootstrap CI",
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "treatment": "Womens E-Mail",
+      "metric": "visit",
+      "control_mean": 0.10617,
+      "treatment_mean": 0.1514,
+      "absolute_lift": 0.04523,
+      "relative_lift": 0.42606,
+      "ci_low": 0.03889,
+      "ci_high": 0.05157,
+      "p_value": 0.0,
+      "test": "two-proportion z-test",
+      "p_holm": 0.0,
+      "significant": true
+    },
+    {
+      "treatment": "Womens E-Mail",
+      "metric": "conversion",
+      "control_mean": 0.00573,
+      "treatment_mean": 0.00884,
+      "absolute_lift": 0.00311,
+      "relative_lift": 0.54331,
+      "ci_low": 0.0015,
+      "ci_high": 0.00472,
+      "p_value": 0.00016,
+      "test": "two-proportion z-test",
+      "p_holm": 0.00031,
+      "significant": true
+    },
+    {
+      "treatment": "Womens E-Mail",
+      "metric": "spend",
+      "control_mean": 0.65279,
+      "treatment_mean": 1.0772,
+      "absolute_lift": 0.42441,
+      "relative_lift": 0.65015,
+      "ci_low": 0.17123,
+      "ci_high": 0.68544,
+      "p_value": 0.00113,
+      "test": "Welch t-test, bootstrap CI",
+      "p_holm": 0.00113,
+      "significant": true
+    }
+  ],
+  "minimum_detectable_effect": {
+    "visit": 0.008361833773370398,
+    "conversion": 0.0020481419005687943,
+    "spend": 0.3145457661706895
+  },
+  "policy_summary": {
+    "Everyone: Mens E-Mail": {
+      "mean": 0.3213,
+      "std": 0.0378
+    },
+    "Model (next best action)": {
+      "mean": 0.286,
+      "std": 0.0368
+    },
+    "Random": {
+      "mean": 0.2554,
+      "std": 0.0375
+    },
+    "Everyone: Womens E-Mail": {
+      "mean": 0.2141,
+      "std": 0.0312
+    },
+    "No e-mail": {
+      "mean": 0.2058,
+      "std": 0.023
+    }
+  },
+  "policy_stats": {
+    "best_blanket_policy": "Everyone: Mens E-Mail",
+    "model_minus_best_blanket_mean": -0.03526203279831086,
+    "model_minus_best_blanket_p05": -0.0795413269846309,
+    "model_minus_best_blanket_p95": -0.00562816456472205,
+    "model_wins_share_of_splits": 0.05
+  },
+  "model_policy_action_shares": {
+    "Womens E-Mail": 0.2707,
+    "Mens E-Mail": 0.6208,
+    "No E-Mail": 0.1085
+  },
+  "scenarios": [
+    {
+      "campaign": "Mens E-Mail",
+      "incremental_revenue": 76982.72,
+      "revenue_ci_low": 48402.24,
+      "revenue_ci_high": 105172.74,
+      "incremental_profit": 13094.81,
+      "profit_ci_low": 4520.67,
+      "profit_ci_high": 21551.82,
+      "break_even_email_cost": 0.23
+    },
+    {
+      "campaign": "Womens E-Mail",
+      "incremental_revenue": 42441.22,
+      "revenue_ci_low": 17123.24,
+      "revenue_ci_high": 68543.72,
+      "incremental_profit": 2732.37,
+      "profit_ci_low": -4863.03,
+      "profit_ci_high": 10563.12,
+      "break_even_email_cost": 0.13
+    }
+  ]
+}
